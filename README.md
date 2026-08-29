@@ -13,7 +13,7 @@ This application is designed using a multi-tier serverless architecture:
 * **Compute**: Executed using **AWS Lambda** (Python 3.x functions with Boto3).
 * **Database**: High-performance, schema-less **Amazon DynamoDB** table.
 
-*Refer to the local [architecture.png](file:///d:/aws/Lambda-cloufront-s3-api%20gateway%20Serverless%20Project/architecture.png) for a visual breakdown of the data flow and AWS services.*
+![Architecture Diagram](architecture.png)
 
 ---
 
@@ -179,56 +179,6 @@ To expose the Lambda functions as secure endpoints, set up a REST API:
    - Allowed callback URLs: Enter your secure CloudFront / Route 53 HTTPS domain URL.
 7. Click **Create user pool**.
 8. Test authentication by navigating to the pool's **App Integration** tab, choosing your app client, and clicking **Open hosted UI** to sign up a test user and log in.
-
----
-
-## 🚀 How to Push this Repository to GitHub
-
-To store this code in a secure GitHub repository, run the following commands in your local command prompt or PowerShell terminal from this project root folder:
-
-### 1. Initialize Git Repository
-```bash
-git init
-```
-
-### 2. Create `.gitignore`
-It is a best practice to exclude temporary logs, system files, and IDE configurations. Create a file named `.gitignore` in the root folder with:
-```text
-# AWS / Node / OS files
-.DS_Store
-Thumbs.db
-.aws/
-*.log
-.gemini/
-```
-
-### 3. Stage and Commit Files
-Add files to the Git repository stage and perform the first local commit:
-```bash
-git add .
-git commit -m "Initial commit: Serverless Employee Management System architecture, frontend and backend"
-```
-
-### 4. Create Repository on GitHub
-1. Log in to your account at [github.com](https://github.com).
-2. Click the **New** button to create a new repository.
-3. Name your repository (e.g., `aws-lambda-cloudfront-s3-serverless-project`).
-4. Keep the repository public or private depending on your preference.
-5. **Do not** initialize it with a README, gitignore, or license (since we have already created them locally).
-6. Click **Create repository**.
-
-### 5. Link Local Repository and Push
-Copy the Git push commands from your GitHub repository setup page and run:
-```bash
-# Rename the default branch to main
-git branch -M main
-
-# Link your local repo to the remote GitHub repo
-git remote add origin https://github.com/<your-github-username>/aws-lambda-cloudfront-s3-serverless-project.git
-
-# Push the code to the main branch
-git push -u origin main
-```
 
 ---
 
