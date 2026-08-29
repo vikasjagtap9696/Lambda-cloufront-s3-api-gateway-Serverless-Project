@@ -180,9 +180,5 @@ To expose the Lambda functions as secure endpoints, set up a REST API:
 7. Click **Create user pool**.
 8. Test authentication by navigating to the pool's **App Integration** tab, choosing your app client, and clicking **Open hosted UI** to sign up a test user and log in.
 
----
-
-## 🔒 Security Best Practices
-- **Never commit AWS credentials** (`access_key_id` or `secret_access_key`) directly to the repository.
-- Use IAM roles and policies to control access between AWS resources instead of hardcoding API keys.
-- Keep S3 buckets private and serve content exclusively through CloudFront using **Origin Access Control (OAC)** in production environments.
+Author
+Vikas Jagtap
